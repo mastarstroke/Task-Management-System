@@ -8,16 +8,17 @@ class TaskService
 {
     public function list($user, $filters = [])
     {
-        $query = Task::where('user_id', $user->id);
-
-        if (!empty($filters['status'])) {
-            $query->where('status', $filters['status']);
-        }
-
         $perPage = $filters['per_page'] ?? 10;
 
-        return $query->latest()->paginate($perPage);
+        $tasks = Task::where('user_id', $user->id)
+            ->select(['id', 'title', 'description', 'status', 'created_at', 'updated_at'])
+            ->when($filters['status'] ?? null, fn($q, $status) => $q->where('status', $status))
+            ->latest()
+            ->paginate($perPage);
+
+        return $tasks;
     }
+
 
 
     public function store(array $data, $user)
