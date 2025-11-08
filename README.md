@@ -179,7 +179,7 @@ Logs can be stored in database, file, or a logging service depending on your imp
 Run tests with:
 
 ```bash
-php artisan test
+php artisan test --filter=TaskApiTest 
 ```
 
 Example included tests:
