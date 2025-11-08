@@ -192,5 +192,5 @@ Example included tests:
 ---
 
 ### Author
-**James Adeyemo** – Laravel Full-Stack Developer
+**James Adeyemo** – Laravel Engineer
 
