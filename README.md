@@ -91,7 +91,7 @@ Make sure your `activity_log()` helper is autoloaded. In `composer.json`:
         "App\\": "app/"
     },
     "files": [
-        "app/Helpers/activity.php"
+        "app/Helper/activity.php"
     ]
 }
 ```
