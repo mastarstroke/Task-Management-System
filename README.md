@@ -79,12 +79,6 @@ php artisan key:generate
 php artisan migrate
 ```
 
-(Optional) Seed sample users/tasks if needed:
-
-```bash
-php artisan db:seed
-```
-
 ---
 
 ### 5. Composer Autoload for Helpers
